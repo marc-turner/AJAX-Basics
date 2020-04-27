@@ -24,7 +24,7 @@ btn.addEventListener('click', function () {
     fetch(url)
         .then(function (request) {
             if (!request.ok) {
-                throw Error('Custom error');
+                throw Error(request.status);
             }
             return request;
         })
